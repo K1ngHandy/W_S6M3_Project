@@ -18,29 +18,29 @@ This is a really fun project, and one to show your family and friends when you'v
 
 ### Task 1: Setup
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm run dev`
-- [ ] Implement the project on the `main` branch, committing changes regularly.
-- [ ] Push commits: `git push origin main`.
+- [x] Create a forked copy of this project.
+- [x] Clone your OWN version of the repository in your terminal
+- [x] Download project dependencies by running `npm install`
+- [x] Start up the app using `npm run dev`
+- [x] Implement the project on the `main` branch, committing changes regularly.
+- [x] Push commits: `git push origin main`.
 
 ### Task 2: Planning
 
-- [ ] If you want, this is the time to make a simple design spec (look up ["simple wireframes"](https://www.google.com/search?q=simple+wireframes) to find resources & examples). **A pen & paper sketch (or outline) is often the fastest way to start your planning.**
-- [ ] Once you have a design plan in mind, break down the designs into individual components.
-- [ ] Plan which components will hold state, what data each needs from props (if any), and where you will make your data fetch.
+- [x] If you want, this is the time to make a simple design spec (look up ["simple wireframes"](https://www.google.com/search?q=simple+wireframes) to find resources & examples). **A pen & paper sketch (or outline) is often the fastest way to start your planning.**
+- [x] Once you have a design plan in mind, break down the designs into individual components.
+- [x] Plan which components will hold state, what data each needs from props (if any), and where you will make your data fetch.
 
 ## Task 3: File structure
 
-- [ ] Take a look at your planned components. Create the folders and files you need for each component.
-- [ ] Leave most of the components blank for now - you need to get your data from the API before you can build the components.
+- [x] Take a look at your planned components. Create the folders and files you need for each component.
+- [x] Leave most of the components blank for now - you need to get your data from the API before you can build the components.
 
 ## Task 4: Fetching the data
 
-- [ ] Inside `frontend/components/App.js` add state for the data you'll get from NASA.
-- [ ] Add an effect hook to handle the API call side effect after the first render of App.
-- [ ] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and learn how to make the API call.
+- [x] Inside `frontend/components/App.js` add state for the data you'll get from NASA.
+- [x] Add an effect hook to handle the API call side effect after the first render of App.
+- [x] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and learn how to make the API call.
 - [ ] Using the endpoint given in the docs, fetch the data using `axios`, which is already installed in the project.
 - [ ] In your `.then()` make sure to `console.log` the response so you can look at the shape of the data. 😃
 - [ ] Before you add your data to state, make sure your effect hook has a dependencies array. Otherwise, you will start an **infinite loop, and you will exceed the API rate limits of the DEMO_KEY and need to request a real API key.**
@@ -59,8 +59,8 @@ This is a really fun project, and one to show your family and friends when you'v
 
 ## Task 5: Consuming the data
 
-- [ ] Once you have made the call correctly, and logged the data, add the data to the state property you built.
-- [ ] Build out your other components. Compose your UI, and then pass the data to your children components via props so you can render it on the DOM.
+- [x] Once you have made the call correctly, and logged the data, add the data to the state property you built.
+- [x] Build out your other components. Compose your UI, and then pass the data to your children components via props so you can render it on the DOM.
 
 **Pro Tips**
 

@@ -1,11 +1,16 @@
 import React from 'react'
+import ImageFetch from './ImageFetch';
 
 function App() {
+  const url = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
+
   return (
-    <p>
-      Read through the instructions in the README.md file to build your NASA
-      app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-    </p>
+    <div>
+      <p>
+      NASA Image of the Day:<span role="img" aria-label='go!'> 🚀</span>
+      </p>
+      <ImageFetch url={url} />
+    </div>
   )
 }
 
