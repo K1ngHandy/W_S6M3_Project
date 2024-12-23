@@ -18,6 +18,8 @@ function ImageFetch(props) {
         }
     };
 
+    // stretch: add date picker
+
     useEffect(() => {
         fetchURL();
     }, [url]);
