@@ -6,9 +6,9 @@ function App() {
 
   return (
     <div>
-      <p>
+      <h2>
       NASA Image of the Day:<span role="img" aria-label='go!'> 🚀</span>
-      </p>
+      </h2>
       <ImageFetch url={url} />
     </div>
   )
