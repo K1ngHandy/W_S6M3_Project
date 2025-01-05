@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 const path = require('path')
 
 const DEVELOPMENT = 'development'
@@ -36,6 +37,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: INDEX_HTML_PATH,
     }),
+    new Dotenv(),
   ],
   devServer: {
     static: path.join(__dirname, DIST_FOLDER),
