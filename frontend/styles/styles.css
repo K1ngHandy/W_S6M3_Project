@@ -20,10 +20,6 @@ h1, h2 {
   text-align: center;
 }
 
-.nasa-blue {
-  color: #0b3d91;
-}
-
 #root {
   width: 100%;
   overflow-y: auto;
@@ -38,37 +34,4 @@ header, footer {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-}
-
-input[type="date"] {
-  padding: 0.5rem;
-  margin: 1rem;
-  border: solid 2px grey;
-  border-radius: 4px;
-}
-
-img {
-  max-width: 90%;
-  height: auto;
-  border: 1px solid grey;
-  border-radius: 4px;
-  margin-top: 1rem;
-}
-
-iframe {
-  border: 1px solid grey;
-  border-radius: 4px;
-  margin-top: 1rem;
-}
-
-.image-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.date-picker {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }

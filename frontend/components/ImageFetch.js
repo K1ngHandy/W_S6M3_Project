@@ -1,5 +1,56 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styled, { keyframes } from "styled-components";
+
+const kf = keyframes`
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+`
+
+const ImageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    padding: 0 3px;
+    h2 {
+        color: ${pr => pr.theme.nasaBlue};
+        text-align: center;
+    }
+    p {
+        color: ${pr => pr.theme.nasaRed};
+        font-weight: bold;
+    }
+    button {
+        background-color: ${pr => pr.theme.background};
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    iframe {
+        border: 3px solid ${pr => pr.theme.nasaRed};
+        border-radius: 4px;
+        margin-top: 1rem;
+    }
+    input[type="date"] {
+        padding: 0.5rem;
+        margin: 1rem;
+        border: solid 2px grey;
+        border-radius: 4px;
+    }
+    img {
+        max-width: 90%;
+        height: auto;
+        border: solid 2px ${pr => pr.theme.nasaRed};
+        border-radius: 12px;
+        margin-top: 1rem;
+    }
+    animation: ${kf} 0.3s ease-in-out forwards;
+`
 
 function ImageFetch(props) {
     const todaysDate = () => {
@@ -55,7 +106,7 @@ function ImageFetch(props) {
     // render if url returns YouTube link instead of image
     const renderContent = () => {
         if (loading) {
-            return <p className="nasa-blue">Loading...</p>
+            return <p>Loading...</p>
         }
 
         if (photo.includes('youtube')) {
@@ -75,16 +126,16 @@ function ImageFetch(props) {
     };
 
     return (
-        <div className="image-container">
+        <ImageContainer>
             <div className="date-picker">
                 <button onClick={() => changeDate(-1)}>⬅️ -1</button>
                 <input type="date" value={date} onChange={handleDateChange} />
                 <button onClick={() => changeDate(1)}>+1 ➡️</button>
             </div>
 
-            <h3 className="nasa-blue">{altText}</h3>
+            <h2>{altText}</h2>
             {renderContent()}
-        </div>
+        </ImageContainer>
     )
 }
 
